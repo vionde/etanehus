@@ -1,0 +1,15 @@
+{% block content %}
+	{% for game in object_list %}
+		<div class="col-lg-4">
+			<div class="game-block">
+				<a href="#" class="info">
+					<span class="price">{{game.price}} руб</span>
+					{% static "" as baseUrl %}
+					<img src="{{baseUrl}}img/{{game.img}}" alt="{{game.img}}" class="game-logo">
+					<h4>{{game.name}}</h4>
+				</a>
+				<button type="button" class="btn btn-success start">Просмотреть</button>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}
